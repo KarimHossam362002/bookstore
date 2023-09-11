@@ -391,7 +391,7 @@
     <section class="section-container mb-5">
       <div class="products__header mb-4 d-flex align-items-center justify-content-between">
         <h4 class="m-0">الاكثر مبيعا</h4>
-        <button class="products__btn py-2 px-3 rounded-1">تسوق الأن</button>
+        <a style="text-decoration: none ; color:black;" class="products__btn py-2 px-3 rounded-1" href="{{ route('shop') }}">تسوق الأن</a>
       </div>
       <div class="owl-carousel products__slider owl-theme">
         <div class="products__item">
@@ -722,7 +722,7 @@
     <section class="section-container mb-5">
       <div class="products__header mb-4 d-flex align-items-center justify-content-between">
         <h4 class="m-0">وصل حديثا</h4>
-        <button class="products__btn py-2 px-3 rounded-1">تسوق الأن</button>
+        <a style="text-decoration: none ;color:black;" class="products__btn py-2 px-3 rounded-1" href="{{ route('shop') }}">تسوق الأن</a>
       </div>
       <div class="owl-carousel products__slider owl-theme">
         <div class="products__item">

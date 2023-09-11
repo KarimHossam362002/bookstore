@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // ADMIN ROUTES ONLY
-Route::get('/', function () {
-    return view('index.index');
-});
+
 Route::get('/dashboard', function () {
     return view('admin.layout');
 
