@@ -17,8 +17,8 @@ class BannerFactory extends Factory
     public function definition(): array
     {
         return [
-            'image' =>fake()->image(),
-            'status' =>fake()->boolean()
+            'image' =>fake()->imageUrl(),
+            'status' =>rand(0,1)
         ];
     }
 }

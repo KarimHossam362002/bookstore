@@ -311,14 +311,52 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        // [
+        //     'text'        => 'pages',
+        //     'url'         => 'admin/pages',
+        //     'icon'        => 'far fa-fw fa-file',
+        //     'label'       => 4,
+        //     'label_color' => 'success',
+        // ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Dashboard',
+            'url'         => 'dashboard',
+            'icon'        => 'fas fa-columns',
         ],
         ['header' => 'account_settings'],
+        [
+            'text' => 'Home',
+            'url'  => '/',
+            'icon' => 'fas fa-home',
+        ],
+        // Banners
+        [
+            'text' => 'Banners',
+            'url'  => 'banners',
+            'icon' => 'fas fa-image',
+        ],
+        // Branches
+        [
+            'text' => 'Branches',
+            'url'  => 'branches',
+            'icon' => 'fas fa-code-branch',
+        ],
+        // Sliders
+        [
+            'text' => 'Sliders',
+            'url'  => 'sliders',
+            'icon' => 'fas fa-images',
+        ],
+        [
+            'text' => 'profile',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'profile',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',

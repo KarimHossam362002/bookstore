@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BranchController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +18,18 @@ use Illuminate\Support\Facades\Route;
 */
 // ADMIN ROUTES ONLY
 
-Route::get('/dashboard', function () {
-    return view('admin.layout');
+// Route::get('/dashboard', function () {
+//     return view('admin.layout');
 
-})->name('dashboard');
+// })->name('dashboard');
 
+// Home
+Route::get('/dashboard',[HomeController::class,"index"])->name('dashboard');
+// banners
+Route::resource('/banners',BannerController::class)->except('show');
+// branches
+Route::resource('/branches',BranchController::class)->except('show');
+//sliders
+Route::resource('/sliders',SliderController::class)->except('show');
 
 ?>

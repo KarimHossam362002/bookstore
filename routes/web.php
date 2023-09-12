@@ -45,7 +45,7 @@ Route::get('/account_details', function () {
 
 })->name('account_details');
 // branches
-Route::get('/branches', function () {
+Route::get('/branche', function () {
     return view('branches.index');
 
 })->name('branches');
