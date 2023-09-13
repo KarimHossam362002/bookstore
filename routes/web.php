@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 Require __DIR__ . '/admin/admin.php';
+Require __DIR__ . '/front/front.php';
 
 
 /*

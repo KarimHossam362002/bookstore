@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SellingFeature;
 use Illuminate\Http\Request;
 
 class SellingFeatureController extends Controller
@@ -11,7 +12,8 @@ class SellingFeatureController extends Controller
      */
     public function index()
     {
-        //
+        $sellings = SellingFeature::select('id','feature_title','feature_description');
+        return view('admin.selling.index' ,compact('sellings'));
     }
 
     /**
