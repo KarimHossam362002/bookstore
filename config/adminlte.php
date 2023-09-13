@@ -347,20 +347,26 @@ return [
             'url'  => 'sliders',
             'icon' => 'fas fa-images',
         ],
+        // information contact
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Information Contact',
+            'url'  => 'informations',
+            'icon' => 'fas fa-info-circle fa-spin',
         ],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Contact messages',
+            'url'  => 'contact_messages',
+            'icon' => 'fas fa-envelope-open-text',
         ],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Selling features',
+            'url'  => '#',
+            'icon' => 'fas fa-star fa-spin',
+        ],
+        [
+            'text' => 'To be Continued',
+            'url'  => '#',
+            'icon' => 'fas fa-spinner fa-spin',
         ],
         // [
         //     'text' => 'change_password',

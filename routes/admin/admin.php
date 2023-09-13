@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformationContactController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +33,10 @@ Route::resource('/banners',BannerController::class)->except('show');
 Route::resource('/branches',BranchController::class)->except('show');
 //sliders
 Route::resource('/sliders',SliderController::class)->except('show');
+Route::resource('/informations',InformationContactController::class)->except('show');
 
+//Contact messages
+Route::get('/contact_messages',[ContactMessageController::class,'index'])->name('contactmessage.index');
+Route::delete('/contact_messages/{id}',[ContactMessageController::class,'destroy'])->name('contactmessage.delete');
+Route::post('/contact',[ContactMessageController::class,'store'])->name('contactmessage.store');
 ?>

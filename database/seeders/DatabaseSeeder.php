@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Branch;
-use App\Models\InformationContact;
-use App\Models\SellingFeature;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +24,7 @@ class DatabaseSeeder extends Seeder
             InformationContactSeeder::class
         ]);
         $this->call([
-            MessageSeeder::class
+            ContactMessageSeeder::class
         ]);
         $this->call([
             BranchSeeder::class
