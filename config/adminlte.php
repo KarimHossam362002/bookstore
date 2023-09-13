@@ -319,15 +319,15 @@ return [
         //     'label_color' => 'success',
         // ],
         [
-            'text'        => 'Dashboard',
-            'url'         => 'dashboard',
-            'icon'        => 'fas fa-columns',
-        ],
-        ['header' => 'account_settings'],
-        [
             'text' => 'Home',
             'url'  => '/',
             'icon' => 'fas fa-home',
+        ],
+        ['header' => 'account_settings'],
+        [
+            'text'        => 'Dashboard',
+            'url'         => 'dashboard',
+            'icon'        => 'fas fa-columns',
         ],
         // Banners
         [
