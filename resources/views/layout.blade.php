@@ -28,7 +28,7 @@
               <div class="header__branches d-flex gap-2 align-items-center">
                 <a class="text-white text-decoration-none" href="{{route('branches')}}">
                   <i class="fa-solid fa-location-dot"></i>
-                  فروعنا  
+                  فروعنا
                 </a>
               </div>
             </div>
@@ -53,20 +53,20 @@
                 </span>
               </div>
               <ul class="nav__links gap-3 list-unstyled d-none d-lg-flex m-0">
-                <!-- <li class="nav__link nav__link-user">
+                 <li class="nav__link nav__link-user">
                   <a class="d-flex align-items-center gap-2">
                     حسابي
                     <i class="fa-regular fa-user"></i>
                     <i class="fa-solid fa-chevron-down fa-2xs"></i>
                   </a>
                   <ul class="nav__user-list position-absolute p-0 list-unstyled bg-white">
-                    <li class="nav__link nav__user-link"><a href="{{route('profile')}}">لوحة التحكم</a></li>
+                    <li class="nav__link nav__user-link"><a href="{{route('dashboard')}}">لوحة التحكم</a></li>
                     <li class="nav__link nav__user-link"><a href="{{route('orders')}}">الطلبات</a></li>
                     <li class="nav__link nav__user-link"><a href="{{route('account_details')}}">تفاصيل الحساب</a></li>
                     <li class="nav__link nav__user-link"><a href="{{route('favourites')}}">المفضلة</a></li>
                     <li class="nav__link nav__user-link"><a href="">تسجيل الخروج</a></li>
                   </ul>
-                </li> -->
+                </li>
                 <li class="nav__link">
                   <a class="d-flex align-items-center gap-2" href="{{route('login')}}">
                     تسجيل الدخول
@@ -113,13 +113,13 @@
                 <li class="nav-mobile__link d-flex align-items-center flex-column gap-1">
                   <a class="d-flex align-items-center flex-column gap-1 text-decoration-none" href="{{route('profile')}}">
                     <i class="fa-regular fa-user"></i>
-                    حسابي 
+                    حسابي
                   </a>
                 </li>
                 <li class="nav-mobile__link d-flex align-items-center flex-column gap-1">
                   <a class="d-flex align-items-center flex-column gap-1 text-decoration-none" href="{{route('favourites')}}">
                     <i class="fa-regular fa-heart"></i>
-                    المفضلة 
+                    المفضلة
                   </a>
                 </li>
                 <li class="nav-mobile__link d-flex align-items-center flex-column gap-1" data-bs-toggle="offcanvas"
@@ -131,7 +131,7 @@
               <!--  -->
             </div>
           </nav>
-    
+
           <div class="nav__categories offcanvas offcanvas-start px-4 py-2" tabindex="-1" id="nav__categories"
             aria-labelledby="nav__categories">
             <div class="nav__categories-header offcanvas-header justify-content-end">
@@ -151,7 +151,7 @@
               </ul>
             </div>
           </div>
-    
+
           <div class="nav__cart offcanvas offcanvas-end px-3 py-2" tabindex="-1" id="nav__cart" aria-labelledby="nav__cart">
             <div class="nav__categories-header offcanvas-header align-items-center">
               <h5>سلة التسوق</h5>
@@ -189,8 +189,8 @@
             </div>
           </div>
         </div>
-    
-    
+
+
         <!-- News Content Start -->
         <section class="sales text-center p-2 d-block d-lg-none">
           شحن مجاني للطلبات 💥 عند الشراء ب 699ج او اكثر
@@ -273,7 +273,7 @@
         </div>
       </footer>
       <!-- Footer Section End -->
-    
+
       <script src="{{asset('assets/js/vendors/all.min.js')}}"></script>
       <script src="{{asset('assets/js/vendors/bootstrap.bundle.min.js')}}"></script>
       <script src="{{asset('assets/js/vendors/jquery-3.7.0.js')}}"></script>

@@ -14,11 +14,14 @@ Require __DIR__ . '/admin/admin.php';
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
+// Home
+Route::get('/', function () {
+    return view('index.index');
+});
 
 
 // USER ROUTES ONLY
+
 //layout
 Route::get('/layout', function () {
     return view('layout');
@@ -42,7 +45,7 @@ Route::get('/account_details', function () {
 
 })->name('account_details');
 // branches
-Route::get('/branches', function () {
+Route::get('/branche', function () {
     return view('branches.index');
 
 })->name('branches');

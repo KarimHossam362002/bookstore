@@ -311,18 +311,62 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        // [
+        //     'text'        => 'pages',
+        //     'url'         => 'admin/pages',
+        //     'icon'        => 'far fa-fw fa-file',
+        //     'label'       => 4,
+        //     'label_color' => 'success',
+        // ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Dashboard',
+            'url'         => 'dashboard',
+            'icon'        => 'fas fa-columns',
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Home',
+            'url'  => '/',
+            'icon' => 'fas fa-home',
+        ],
+        // Banners
+        [
+            'text' => 'Banners',
+            'url'  => 'banners',
+            'icon' => 'fas fa-image',
+        ],
+        // Branches
+        [
+            'text' => 'Branches',
+            'url'  => 'branches',
+            'icon' => 'fas fa-code-branch',
+        ],
+        // Sliders
+        [
+            'text' => 'Sliders',
+            'url'  => 'sliders',
+            'icon' => 'fas fa-images',
+        ],
+        // information contact
+        [
+            'text' => 'Information Contact',
+            'url'  => 'informations',
+            'icon' => 'fas fa-info-circle fa-spin',
+        ],
+        [
+            'text' => 'Contact messages',
+            'url'  => 'contact_messages',
+            'icon' => 'fas fa-envelope-open-text',
+        ],
+        [
+            'text' => 'Selling features',
+            'url'  => '#',
+            'icon' => 'fas fa-star fa-spin',
+        ],
+        [
+            'text' => 'To be Continued',
+            'url'  => '#',
+            'icon' => 'fas fa-spinner fa-spin',
         ],
         // [
         //     'text' => 'change_password',
