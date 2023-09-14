@@ -6,11 +6,13 @@ use App\Models\Banner;
 use App\Models\Branch;
 use App\Models\Category;
 use App\Models\ContactMessage;
+use App\Models\Faq;
 use App\Models\InformationContact;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\SellingFeature;
 use App\Models\Slider;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,6 +32,8 @@ class HomeController extends Controller
         $selling_feature_count = SellingFeature::count('id');
         $category_count = Category::count('id');
         $product_count = Product::count('id');
+        $tag_count = Tag::count('id');
+        $faq_count = Faq::count('id');
         return view('admin.layout', compact(
             'user_count',
             'admin_count',
@@ -40,7 +44,9 @@ class HomeController extends Controller
             "message_count",
             "selling_feature_count",
             "category_count",
-            "product_count"
+            "product_count",
+            "tag_count",
+            "faq_count",
         ));
     }
 }

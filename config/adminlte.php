@@ -344,6 +344,11 @@ return [
             'url'         => 'categories',
             'icon'        => 'fas fa-th',
         ],
+        [
+            'text'        => 'Tags',
+            'url'         => 'tags',
+            'icon'        => 'fas fa-tag',
+        ],
         // Banners
         [
             'text' => 'Banners',
@@ -374,17 +379,29 @@ return [
             'url'  => 'contact_messages',
             'icon' => 'fas fa-envelope-open-text',
         ],
+        // FAQ
+        [
+            'text' => 'FAQ',
+            'url'  => 'faqs',
+            'icon' => 'fas fa-question-circle fa-spin',
+        ],
+        // Wish List
+        [
+            'text' => 'Wish List',
+            'url'  => 'wishlists',
+            'icon' => 'fas fa-heart',
+        ],
         // Selling features
         [
             'text' => 'Selling features',
             'url'  => 'sellings',
             'icon' => 'fas fa-star fa-spin',
         ],
-        [
-            'text' => 'To be Continued',
-            'url'  => '#',
-            'icon' => 'fas fa-spinner fa-spin',
-        ],
+        // [
+        //     'text' => 'To be Continued',
+        //     'url'  => '#',
+        //     'icon' => 'fas fa-spinner fa-spin',
+        // ],
         // [
         //     'text' => 'change_password',
         //     'url'  => 'admin/settings',

@@ -3,11 +3,15 @@
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SellingFeatureController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +34,7 @@ use Illuminate\Support\Facades\Route;
 // Home
 Route::get('/dashboard',[HomeController::class,"index"])->name('dashboard');
 // users
-
+Route::resource('/users',UserController::class)->except('show');
 // banners
 Route::resource('/banners',BannerController::class)->except('show');
 // branches
@@ -45,4 +49,10 @@ Route::resource('/sellings',SellingFeatureController::class)->except('show');
 Route::resource('/categories', CategoryController::class)->except('show');
 // products
 Route::resource('/products', ProductController::class);
+// tags
+Route::resource('/tags', TagController::class)->except('show');
+// faqs
+Route::resource('/faqs', FaqController::class)->except('show');
+// wishlists
+Route::get('/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
 ?>
