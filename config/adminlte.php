@@ -329,6 +329,21 @@ return [
             'url'         => 'dashboard',
             'icon'        => 'fas fa-columns',
         ],
+        [
+            'text'        => 'Users',
+            'url'         => 'users',
+            'icon'        => 'fas fa-users',
+        ],
+        [
+            'text'        => 'Products',
+            'url'         => 'products',
+            'icon'        => 'fab fa-product-hunt',
+        ],
+        [
+            'text'        => 'Categories',
+            'url'         => 'categories',
+            'icon'        => 'fas fa-th',
+        ],
         // Banners
         [
             'text' => 'Banners',
