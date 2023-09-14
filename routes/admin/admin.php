@@ -4,6 +4,8 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\Front\AdminDisplayController;
+use App\Http\Controllers\Front\UserDisplayController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationContactController;
 use App\Http\Controllers\ProductController;
@@ -55,4 +57,7 @@ Route::resource('/tags', TagController::class)->except('show');
 Route::resource('/faqs', FaqController::class)->except('show');
 // wishlists
 Route::get('/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
+// user dashboard routes
+Route::get("/dashboard/users",[UserDisplayController::class,'index'])->name('users.dashboard');
+Route::get("/dashboard/admins",[AdminDisplayController::class,'index'])->name('admins.dashboard');
 ?>
