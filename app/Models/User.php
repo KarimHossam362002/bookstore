@@ -24,6 +24,9 @@ class User extends Authenticatable
         'type',
         'image'
     ];
+    public function wishlists(){
+        return $this->belongsToMany(Wishlist::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -22,4 +22,14 @@ class Product extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
+    }
+    public function wishlists(){
+        return $this->belongsToMany(Wishlist::class);
+    }
+    public function faqs(){
+        return $this->hasMany(Faq::class);
+    }
+
 }
