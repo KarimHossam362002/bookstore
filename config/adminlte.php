@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => 'Dashboard',
+    'title_prefix' => 'Book Store |',
     'title_postfix' => '',
 
     /*
@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>BookStore</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/logo.png',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -109,11 +109,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/logo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'width' => 100,
+            'height' => 100,
         ],
     ],
 
@@ -319,15 +319,30 @@ return [
         //     'label_color' => 'success',
         // ],
         [
+            'text' => 'Home',
+            'url'  => '/',
+            'icon' => 'fas fa-home',
+        ],
+        ['header' => 'account_settings'],
+        [
             'text'        => 'Dashboard',
             'url'         => 'dashboard',
             'icon'        => 'fas fa-columns',
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'Home',
-            'url'  => '/',
-            'icon' => 'fas fa-home',
+            'text'        => 'Users',
+            'url'         => 'users',
+            'icon'        => 'fas fa-users',
+        ],
+        [
+            'text'        => 'Products',
+            'url'         => 'products',
+            'icon'        => 'fab fa-product-hunt',
+        ],
+        [
+            'text'        => 'Categories',
+            'url'         => 'categories',
+            'icon'        => 'fas fa-th',
         ],
         // Banners
         [
@@ -353,14 +368,16 @@ return [
             'url'  => 'informations',
             'icon' => 'fas fa-info-circle fa-spin',
         ],
+        // Contact messages
         [
             'text' => 'Contact messages',
             'url'  => 'contact_messages',
             'icon' => 'fas fa-envelope-open-text',
         ],
+        // Selling features
         [
             'text' => 'Selling features',
-            'url'  => '#',
+            'url'  => 'sellings',
             'icon' => 'fas fa-star fa-spin',
         ],
         [
