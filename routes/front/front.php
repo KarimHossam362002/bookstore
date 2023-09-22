@@ -20,9 +20,9 @@ Route::get('/dashboard/orders',[OrderController::class,'index'])->name('orders.i
 Route::get('/dashboard/orders/{id}',[OrderController::class,'destroy'])->name('orders.delete');
 
 //Contact messages
-Route::get('/contact_messages',[ContactMessageController::class,'index'])->name('contactmessage.index');
-Route::delete('/contact_messages/{id}',[ContactMessageController::class,'destroy'])->name('contactmessage.delete');
-Route::post('/contact',[ContactMessageController::class,'store'])->name('contactmessage.store');
+Route::get('/dashboard/contact_messages',[ContactMessageController::class,'index'])->name('contactmessage.index');
+Route::delete('/dashboard/contact_messages/{id}',[ContactMessageController::class,'destroy'])->name('contactmessage.delete');
+Route::post('/dashboard/contact',[ContactMessageController::class,'store'])->name('contactmessage.store');
 
 //wishlists
 Route::get('/dashboard/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
