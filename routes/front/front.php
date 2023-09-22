@@ -1,6 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\WishlistController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +15,15 @@ use App\Http\Controllers\ContactMessageController;
 */
 
 // User send Routes
+// Orders
+Route::get('/dashboard/orders',[OrderController::class,'index'])->name('orders.index');
+Route::get('/dashboard/orders/{id}',[OrderController::class,'destroy'])->name('orders.delete');
 
 //Contact messages
 Route::get('/contact_messages',[ContactMessageController::class,'index'])->name('contactmessage.index');
 Route::delete('/contact_messages/{id}',[ContactMessageController::class,'destroy'])->name('contactmessage.delete');
 Route::post('/contact',[ContactMessageController::class,'store'])->name('contactmessage.store');
+
+//wishlists
+Route::get('/dashboard/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
+Route::get('/dashboard/wishlists/{id}', [WishlistController::class,'destroy'])->name('wishlists.delete');
