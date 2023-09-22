@@ -331,70 +331,82 @@ return [
         ],
         [
             'text'        => 'Users',
-            'url'         => 'users',
+            'url'         => '/dashboard/users',
             'icon'        => 'fas fa-users',
         ],
         [
             'text'        => 'Products',
-            'url'         => 'products',
+            'url'         => '/dashboard/products',
             'icon'        => 'fab fa-product-hunt',
         ],
         [
             'text'        => 'Categories',
-            'url'         => 'categories',
+            'url'         => '/dashboard/categories',
             'icon'        => 'fas fa-th',
         ],
         [
             'text'        => 'Tags',
-            'url'         => 'tags',
+            'url'         => '/dashboard/tags',
             'icon'        => 'fas fa-tag',
         ],
         // Banners
         [
             'text' => 'Banners',
-            'url'  => 'banners',
+            'url'  => '/dashboard/banners',
             'icon' => 'fas fa-image',
         ],
         // Branches
         [
             'text' => 'Branches',
-            'url'  => 'branches',
+            'url'  => '/dashboard/branches',
             'icon' => 'fas fa-code-branch',
         ],
         // Sliders
         [
             'text' => 'Sliders',
-            'url'  => 'sliders',
+            'url'  => '/dashboard/sliders',
             'icon' => 'fas fa-images',
         ],
         // information contact
         [
             'text' => 'Information Contact',
-            'url'  => 'informations',
+            'url'  => '/dashboard/informations',
             'icon' => 'fas fa-info-circle fa-spin',
         ],
         // Contact messages
         [
             'text' => 'Contact messages',
-            'url'  => 'contact_messages',
+            'url'  => '/dashboard/contact_messages',
             'icon' => 'fas fa-envelope-open-text',
+        ],
+        // Orders
+        [
+            'text' => 'Orders',
+            'url'  => 'dashboard/orders',
+            'icon' => 'fas fa-people-carry',
+        ],
+        // Carts
+        [
+            'text' => 'Carts',
+            'url'  => '/dashboard/carts',
+            'icon' => 'fas fa-shopping-cart',
         ],
         // FAQ
         [
             'text' => 'FAQ',
-            'url'  => 'faqs',
+            'url'  => '/dashboard/faqs',
             'icon' => 'fas fa-question-circle fa-spin',
         ],
         // Wish List
         [
             'text' => 'Wish List',
-            'url'  => 'wishlists',
+            'url'  => '/dashboard/wishlists',
             'icon' => 'fas fa-heart',
         ],
         // Selling features
         [
             'text' => 'Selling features',
-            'url'  => 'sellings',
+            'url'  => '/dashboard/sellings',
             'icon' => 'fas fa-star fa-spin',
         ],
         // [

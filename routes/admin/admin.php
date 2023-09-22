@@ -33,30 +33,30 @@ use Illuminate\Support\Facades\Route;
 
 // })->name('dashboard');
 
+
 // Home
 Route::get('/dashboard',[HomeController::class,"index"])->name('dashboard');
 // users
-Route::resource('/users',UserController::class)->except('show');
+Route::resource('/dashboard/users',UserController::class)->except('show');
 // banners
-Route::resource('/banners',BannerController::class)->except('show');
+Route::resource('/dashboard/banners',BannerController::class)->except('show');
 // branches
-Route::resource('/branches',BranchController::class)->except('show');
+Route::resource('/dashboard/branches',BranchController::class)->except('show');
 //sliders
-Route::resource('/sliders',SliderController::class)->except('show');
+Route::resource('/dashboard/sliders',SliderController::class)->except('show');
 // informations
-Route::resource('/informations',InformationContactController::class)->except('show');
+Route::resource('/dashboard/informations',InformationContactController::class)->except('show');
 //sellings
-Route::resource('/sellings',SellingFeatureController::class)->except('show');
+Route::resource('/dashboard/sellings',SellingFeatureController::class)->except('show');
 // categories
-Route::resource('/categories', CategoryController::class)->except('show');
+Route::resource('/dashboard/categories', CategoryController::class)->except('show');
 // products
-Route::resource('/products', ProductController::class);
+Route::resource('/dashboard/products', ProductController::class);
 // tags
-Route::resource('/tags', TagController::class)->except('show');
+Route::resource('/dashboard/tags', TagController::class)->except('show');
 // faqs
-Route::resource('/faqs', FaqController::class)->except('show');
-// wishlists
-Route::get('/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
+Route::resource('/dashboard/faqs', FaqController::class)->except('show');
+
 // user dashboard routes
 Route::get("/dashboard/users",[UserDisplayController::class,'index'])->name('users.dashboard');
 Route::get("/dashboard/admins",[AdminDisplayController::class,'index'])->name('admins.dashboard');
