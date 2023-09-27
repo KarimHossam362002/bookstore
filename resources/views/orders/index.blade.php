@@ -9,7 +9,7 @@
           <h2>حسابي</h2>
         </div>
         <div class="page-top__breadcrumb">
-          <a class="text-gray" href="{{route('index')}}">الرئيسية</a> /
+          <a class="text-gray" href="{{route('home.index')}}">الرئيسية</a> /
           <span class="text-gray">حسابي</span>
         </div>
       </div>
@@ -106,7 +106,7 @@
         </div>
         <!-- <section class="section-container">
           <p>تم تقديم الطلب #79917 في يوليو 26, 2023 وهو الآن بحالة قيد التنفيذ.</p>
-    
+
           <section>
             <h2>تفاصيل الطلب</h2>
             <table class="success__table w-100 mb-5">
@@ -185,5 +185,5 @@
         </section> -->
       </div>
     </section>
-  </main> 
+  </main>
 @endsection

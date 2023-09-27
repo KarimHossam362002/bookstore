@@ -20,7 +20,8 @@
                 <div class="section-container d-flex justify-content-between">
                     <div class="header__email d-flex gap-2 align-items-center">
                         <i class="fa-regular fa-envelope"></i>
-                        coding.arabic@gmail.com
+                        <a style="color: white; text-decoration:none;"
+                            href="mailto:coding.arabic@gmail.com">coding.arabic@gmail.com</a>
                     </div>
                     <div class="header__info d-none d-lg-block">
                         شحن مجاني للطلبات 💥 عند الشراء ب 699ج او اكثر
@@ -248,7 +249,11 @@
                         </div>
                         <div class="d-flex gap-3 mb-3">
                             <div class="fs-5"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="text-gray">coding.arabic@gmail.com</div>
+                            <div class="text-gray">
+                                <a style="color: #ccc; text-decoration:none;"
+                                    href="mailto:coding.arabic@gmail.com">coding.arabic@gmail.com</a>
+
+                            </div>
                         </div>
                     </div>
                     <div>

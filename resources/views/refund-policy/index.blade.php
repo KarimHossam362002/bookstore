@@ -11,7 +11,7 @@
           <h2>سياسة الاستبدال والاسترجاع</h2>
         </div>
         <div class="page-top__breadcrumb">
-          <a class="text-gray" href="{{route('index')}}">الرئيسية</a> /
+          <a class="text-gray" href="{{route('home.index')}}">الرئيسية</a> /
           <span class="text-gray">سياسة الاستبدال والاسترجاع</span>
         </div>
       </div>

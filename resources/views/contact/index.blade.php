@@ -9,7 +9,7 @@
                     <h2>تواصل معنا</h2>
                 </div>
                 <div class="page-top__breadcrumb">
-                    <a class="text-gray" href="{{ route('index') }}">الرئيسية</a> /
+                    <a class="text-gray" href="{{ route('home.index') }}">الرئيسية</a> /
                     <span class="text-gray">تواصل معنا</span>
                 </div>
             </div>
