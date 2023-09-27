@@ -44,7 +44,7 @@
                         </button>
                     </div>
                     <div class="nav__logo">
-                        <a href="{{ route('index') }}">
+                        <a href="{{ route('home.index') }}">
                             <img class="h-100" src="{{ asset('assets/images/logo.png') }}" alt="">
                         </a>
                     </div>
@@ -107,7 +107,7 @@
                     <ul class="nav-mobile__list d-flex justify-content-around gap-2 list-unstyled  m-0 border-top">
                         <li class="nav-mobile__link">
                             <a class="d-flex align-items-center flex-column gap-1 text-decoration-none"
-                                href="{{ route('index') }}">
+                                href="{{ route('home.index') }}">
                                 <i class="fa-solid fa-house"></i>
                                 الرئيسية
                             </a>

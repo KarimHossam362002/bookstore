@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Home
-Route::get('/', function () {
-    return view('index.index');
-});
 
 
 // USER ROUTES ONLY
@@ -67,10 +64,10 @@ Route::get('/favourites', function () {
 
 })->name('favourites');
 // index
-Route::get('/home', function () {
-    return view('index.index');
+// Route::get('/home', function () {
+//     return view('index.index');
 
-})->name('index');
+// })->name('index');
 // order-details
 Route::get('/order-details', function () {
     return view('order-details.index');
