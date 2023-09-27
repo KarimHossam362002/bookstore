@@ -1,6 +1,11 @@
 <?php
+
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\Front\HomeDisplayController;
+use App\Http\Controllers\Front\SidebarDisplayController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\WishlistController;
 
 /*
@@ -17,7 +22,7 @@ use App\Http\Controllers\WishlistController;
 // User send Routes
 // Orders
 Route::get('/dashboard/orders',[OrderController::class,'index'])->name('orders.index');
-Route::get('/dashboard/orders/{id}',[OrderController::class,'destroy'])->name('orders.delete');
+Route::get('/dashboard/orders/{id}',[OrderController::class,'destroy'])->name('orders.destroy');
 
 //Contact messages
 Route::get('/dashboard/contact_messages',[ContactMessageController::class,'index'])->name('contactmessage.index');
@@ -26,4 +31,15 @@ Route::post('/dashboard/contact',[ContactMessageController::class,'store'])->nam
 
 //wishlists
 Route::get('/dashboard/wishlists', [WishlistController::class,'index'])->name('wishlists.index');
-Route::get('/dashboard/wishlists/{id}', [WishlistController::class,'destroy'])->name('wishlists.delete');
+Route::delete('/dashboard/wishlists/{id}', [WishlistController::class,'destroy'])->name('wishlists.destroy');
+
+// carts
+Route::get('/dashboard/carts', [CartController::class,'index'])->name('carts.index');
+Route::delete('/dashboard/carts/{id}', [CartController::class,'destroy'])->name('carts.destroy');
+
+// Home Display
+Route::get('/',[HomeDisplayController::class,'index'])->name('home.index');
+// Category sidebar
+Route::get('/sidebar',[SidebarDisplayController::class , 'index']);
+
+

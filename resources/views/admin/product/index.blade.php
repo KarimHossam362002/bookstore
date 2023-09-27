@@ -23,6 +23,7 @@
                 <th>Pages number</th>
                 <th>price</th>
                 <th>Quantity</th>
+                <th>Available</th>
                 <th>Delete</th>
                 <th>Update</th>
                 <th>Show</th>
@@ -36,6 +37,7 @@
                         <td>{{ $product->pages_num }}</td>
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->quantity }}</td>
+                        <td>{{ $product->available == 1 ? "متوفر بالمخزون ":"غير متوفر بالمخزون" }}</td>
                         <td class="d-flex">
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                 @method('DELETE')

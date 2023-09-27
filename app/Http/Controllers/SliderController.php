@@ -71,7 +71,7 @@ class SliderController extends Controller
         if($request->hasFile('image')){
 
             $ext = $request->image->extension();
-            $newName = "Banner".time() . rand(0, mt_getrandmax()) . '.' . $ext;
+            $newName = "Slider".time() . rand(0, mt_getrandmax()) . '.' . $ext;
             $request->image->move(public_path('assets/images/sliders'), $newName);
         }
         $slider->update([

@@ -14,13 +14,19 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('author');
             $table->unsignedBigInteger('pages_num');
-            $table->decimal('price', 10, 2);
-            $table->decimal('discount', 10,2);
-            $table->decimal('quantity', 10, 2);
+            $table->decimal('price',10);
+            $table->decimal('discount', 10);
+            $table->decimal('price_after_discount', 10);
+            $table->decimal('quantity', 10);
+            $table->boolean('available');
+            $table->string('image');
             $table->string('product_code');
+            $table->foreignId('category_id')->nullable()->constrained('categories')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

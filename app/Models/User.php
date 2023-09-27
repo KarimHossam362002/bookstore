@@ -27,6 +27,12 @@ class User extends Authenticatable
     public function wishlists(){
         return $this->belongsToMany(Wishlist::class);
     }
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
+    public function carts(){
+        return $this->belongsToMany(Cart::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

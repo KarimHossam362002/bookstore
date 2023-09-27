@@ -5,18 +5,37 @@
   <main class="pt-4">
     <!-- Hero Section Start -->
     <section class="section-container hero">
-      <div class="owl-carousel hero__carousel owl-theme">
-        <div class="hero__item">
-          <img class="hero__img" src="{{asset('assets/images/carousel-2.png')}}" alt="">
+        <div class="owl-carousel hero__carousel owl-theme">
+            {{-- start foreach --}}
+
+            @foreach ($sliders as $slider )
+             @if ($slider->status == 1)
+             <div class="hero__item">
+                 <img class="hero__img" src="
+                    {{-- file exist --}}
+                    @php
+                    $imagePath = asset('assets/images/sliders/' . $slider->image);
+                    @endphp
+                     {{-- @dd(!file_exists(public_path($imagePath))) --}}
+                        {{-- @dd(empty($doctorData->image)) --}}
+                    @if (!file_exists(public_path($imagePath)) && !empty($slider->image))
+                    {{ $imagePath }}
+                    @else
+                    {{ asset('assets/images/sliders/defaultSlider.png') }}
+                    @endif
+                 " alt="">
+             </div>
+             @endif
+            @endforeach
+          {{-- end foreach --}}
+
+
+          {{-- <div class="hero__item">
+            <img class="hero__img" src="{{ asset('assets/images/sliders/Banner16945571041788276465.png') }}" alt="">
+          </div> --}}
+
         </div>
-        <div class="hero__item">
-          <img class="hero__img" src="{{asset('assets/images/carousel-2.png')}}" alt="">
-        </div>
-        <div class="hero__item">
-          <img class="hero__img" src="{{asset('assets/images/carousel-2.png')}}" alt="">
-        </div>
-      </div>
-    </section>
+      </section>
     <!-- Hero Section End -->
 
     <!-- Offer Section Start -->
@@ -372,18 +391,39 @@
 
     <!-- Categories Section Start -->
     <section class="section-container mb-5">
-      <div class="categories row gx-4">
-        <div class="col-md-6 p-2">
-          <div class="p-4 border rounded-3">
-            <img class="w-100" src="{{asset('assets/images/category-1.png')}}" alt="">
+        {{-- start foreach --}}
+
+
+        <div class="categories row gx-4">
+            @foreach ($banners as $banner )
+            @if ($banner->status == 1)
+          <div class="col-md-6 p-2">
+            <div class="p-4 border rounded-3">
+              <img class="w-100" src="
+              {{-- file exist --}}
+              @php
+              $imagePath = asset('assets/images/banners/' . $banner->image);
+              @endphp
+               {{-- @dd(!file_exists(public_path($imagePath))) --}}
+                  {{-- @dd(empty($doctorData->image)) --}}
+              @if (!empty($banner->image))
+              {{ $imagePath }}
+              @else
+              {{ asset('assets/images/banners/defaultBanner.png') }}
+              @endif
+              " alt="">
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 p-2">
+
+        @endif
+        @endforeach
+        {{-- end foreach --}}
+        {{-- <div class="col-md-6 p-2">
           <div class="p-4 border rounded-3">
             <img class="w-100" src="{{asset('assets/images/category-2.png')}}" alt="">
           </div>
         </div>
-      </div>
+      </div> --}}
     </section>
     <!-- Categories Section End -->
 

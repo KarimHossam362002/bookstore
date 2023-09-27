@@ -6,33 +6,32 @@
     @endif
 
     <table class="table">
-        <p>I CANT UNDERSTAND WISHLIST LOGIC IN MANY TO MANY RELATIONSHIP HOW TO CONNECT BETWEEN TABLES AND DISPLAY IT ;-;</p>
         <thead>
+
             <th>id</th>
+
             <th>created_at</th>
             <th>updated_at</th>
             <th>Delete</th>
 
         </thead>
         <tbody>
-            <tr>
-                @foreach ($wishlists as $wishlist)
-                    <td>{{ $wishlist->id }}</td>
-                    <td>{{ $wishlist->total }}</td>
-                    <td>{{ $wishlist->status }}</td>
+            @foreach ($wishlists as $wishlist)
+                <tr>
 
-                    <td class="d-flex">
-                        <form action="{{ route('wishlists.delete', $wishlist->id) }}" method="POST">
+                    <td>{{ $wishlist->id }}</td>
+                    <td>{{ $wishlist->created_at }}</td>
+                    <td>{{ $wishlist->updated_at }}</td>
+                    <td>
+                        <form action="{{ route('wishlists.destroy' , $wishlist->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <button class="delete-wishlist btn btn-danger" type="submit"><i
-                                    class="fas fa-minus-circle"></i></button>
+                            <button class="delete-wishlist btn btn-danger" type="submit"><i class="fas fa-minus-circle"></i></button>
                         </form>
-
                     </td>
-            </tr>
-            @endforeach
 
+                </tr>
+            @endforeach
         </tbody>
     </table>
 
@@ -55,14 +54,12 @@
                                 $pageNum = strstr($rev, '=', true);
                                 $pageNum = strrev($pageNum);
                             @endphp
-                            <li
-                                class="page-item {{ substr($pageLink, -1) == $wishlists->currentPage() ? 'active' : '' }}">
+                            <li class="page-item {{ substr($pageLink, -1) == $wishlists->currentPage() ? 'active' : '' }}">
                                 <a class="page-link" href="{{ $pageLink }}">{{ $pageNum }}
                                 </a>
                             </li>
                         @endforeach
-                        <li
-                            class="page-item {{ $wishlists->currentPage() == $wishlists->lastPage() ? 'disabled' : '' }}">
+                        <li class="page-item {{ $wishlists->currentPage() == $wishlists->lastPage() ? 'disabled' : '' }}">
                             <a class="page-link" href="{{ $wishlists->nextPageUrl() }}" aria-label="Next">
                                 <span class="fa fa-angle-double-right" aria-hidden="true"></span>
                                 <span class="sr-only"> {{ 'lang.Next' }} </span>

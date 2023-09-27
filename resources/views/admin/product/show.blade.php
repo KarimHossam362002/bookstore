@@ -19,22 +19,40 @@
             <th>Product title</th>
             <th>Author</th>
             <th>Description</th>
+            <th>Image</th>
             <th>price</th>
             <th>Discount</th>
+            <th>Price After Discount</th>
             <th>Product Code</th>
+            <th>Category name</th>
             <th>Delete</th>
             <th>Update</th>
         </thead>
         <tbody>
             <tr>
-                @foreach ($products as $product)
+
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->title }}</td>
                     <td>{{ $product->author }}</td>
                     <td>{{ $product->description }}</td>
+                    <td><img width="100px" src="
+                        {{-- file exist --}}
+                        @php
+                        $imagePath = asset('assets/images/products/' . $product->image);
+                        @endphp
+                         {{-- @dd(!file_exists(public_path($imagePath))) --}}
+                            {{-- @dd(empty($doctorData->image)) --}}
+                        @if (!file_exists(public_path($imagePath)) && !empty($product->image))
+                        {{ $imagePath }}
+                        @else
+                        {{ asset('assets/images/products/defaultProduct.png') }}
+                        @endif
+                        " alt=""></td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->discount }}</td>
+                    <td>{{ $product->price_after_discount}}</td>
                     <td>{{ $product->product_code }}</td>
+                    <td>{{ $product->category?->title }}</td>
                     <td class="d-flex">
                         <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                             @method('DELETE')
@@ -49,47 +67,11 @@
                     {{-- <td><a href="{{ route('products.show', $product->id) }}" class="btn btn-primary"><i
                                 class="fas fa-clipboard-list"></i></a></td> --}}
             </tr>
-            @endforeach
+
 
         </tbody>
     </table>
 
-    <div class="row">
-        <div class="col-12 mt-5">
-            @if ($products->hasPages())
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item {{ $products->currentPage() == 1 ? 'disabled' : '' }}">
-                            <a class="page-link" href="{{ $products->previousPageUrl() }}" aria-label="Previous">
-                                <span class="fa fa-angle-double-left" aria-hidden="true"></span>
-                                <span class="sr-only"> {{ 'lang.Previous' }} </span>
-                            </a>
-                        </li>
-                        @foreach ($products->getUrlRange(1, $products->lastPage()) as $pageLink)
-                            @php
-                                //fuck you php iam mohamed seabeai
-                                $pageString = strstr($pageLink, 'page=', false);
-                                $rev = strrev($pageString);
-                                $pageNum = strstr($rev, '=', true);
-                                $pageNum = strrev($pageNum);
-                            @endphp
-                            <li class="page-item {{ substr($pageLink, -1) == $products->currentPage() ? 'active' : '' }}">
-                                <a class="page-link" href="{{ $pageLink }}">{{ $pageNum }}
-                                </a>
-                            </li>
-                        @endforeach
-                        <li class="page-item {{ $products->currentPage() == $products->lastPage() ? 'disabled' : '' }}">
-                            <a class="page-link" href="{{ $products->nextPageUrl() }}" aria-label="Next">
-                                <span class="fa fa-angle-double-right" aria-hidden="true"></span>
-                                <span class="sr-only"> {{ 'lang.Next' }} </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            @endif
-
-        </div>
-    </div>
 
 
 @section('js')

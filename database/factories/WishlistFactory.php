@@ -29,10 +29,11 @@ class WishlistFactory extends Factory
      */
     public function withProducts()
     {
-        return $this->hasAttached(Product::factory()->count(5), ['quantity' => 1]);
+        // return $this->hasAttached(Product::factory()->count(5), ['quantity' => 1]);
+        return $this->hasAttached(Product::factory()->count(1));
     }
     public function withUsers()
     {
-        return $this->hasAttached(User::factory()->count(5), ['quantity' => 1]);
+        return $this->hasAttached(User::factory()->count(1));
     }
 }

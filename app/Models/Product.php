@@ -15,18 +15,28 @@ class Product extends Model
         "pages_num",
         "price",
         "discount",
+        "price_after_discount",
         "quantity",
-        "product_code"
+        "product_code",
+        "available",
+        "image",
+        "category_id"
     ];
-    public function categories()
+    public function category()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
     public function tags(){
         return $this->belongsToMany(Tag::class);
     }
     public function wishlists(){
         return $this->belongsToMany(Wishlist::class);
+    }
+    public function carts(){
+        return $this->belongsToMany(Cart::class);
+    }
+    public function orders(){
+        return $this->belongsToMany(Order::class);
     }
     public function faqs(){
         return $this->hasMany(Faq::class);

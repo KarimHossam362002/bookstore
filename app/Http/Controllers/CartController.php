@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
     function index(){
-        $carts = Cart::select('id','total','status')->paginate(5);
+        $carts = Cart::paginate(5);
         return view('admin.cart.index' , compact('carts'));
     }
     function destroy(string $id){

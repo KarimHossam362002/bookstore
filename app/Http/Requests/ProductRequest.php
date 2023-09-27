@@ -29,8 +29,12 @@ class ProductRequest extends FormRequest
             "price" => ['required', 'numeric'],
             // "discount" => ['required', 'string','between:1,100'],
             "discount" => ['required', 'numeric','between:10,100'],
+            "price_after_discount" => ['sometimes', 'numeric','between:10,100'],
             "quantity" => ['required', 'numeric'],
-            "product_code" => ['required', 'numeric']
+            "product_code" => ['required', 'numeric'],
+            "available" => ['required','in:0,1'],
+            "image" => ["mimes:png,jpg,jpeg,gif,webp"],
+            'category_id' => ["required"],
         ];
     }
 }

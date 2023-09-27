@@ -1,8 +1,9 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
-Require __DIR__ . '/admin/admin.php';
-Require __DIR__ . '/front/front.php';
+
+
 
 
 /*
@@ -111,7 +112,12 @@ Route::get('/single-product', function () {
 
 })->name('single-product');
 // truck-order
-Route::get('/truck-order', function () {
+Route::get('/track-order', function () {
     return view('truck-order.index');
 
 })->name('truck-order');
+
+
+
+Require __DIR__ . '/admin/admin.php';
+Require __DIR__ . '/front/front.php';
